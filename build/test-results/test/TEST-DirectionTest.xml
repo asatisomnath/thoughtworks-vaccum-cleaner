@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DirectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-19T05:39:16" hostname="somnath-Latitude-5480" time="0.001">
+<testsuite name="DirectionTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-04-22T08:56:41" hostname="somnath-Latitude-5480" time="0.002">
   <properties/>
-  <testcase name="turn" classname="DirectionTest" time="0.001"/>
+  <testcase name="turnFromEast" classname="DirectionTest" time="0.0"/>
+  <testcase name="turnFromWest" classname="DirectionTest" time="0.001"/>
+  <testcase name="frowardToNorth" classname="DirectionTest" time="0.0"/>
+  <testcase name="frowardToSouth" classname="DirectionTest" time="0.0"/>
+  <testcase name="frowardToEast" classname="DirectionTest" time="0.0"/>
+  <testcase name="frowardToWest" classname="DirectionTest" time="0.0"/>
+  <testcase name="turnFromNorth" classname="DirectionTest" time="0.0"/>
+  <testcase name="turnFromSouth" classname="DirectionTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

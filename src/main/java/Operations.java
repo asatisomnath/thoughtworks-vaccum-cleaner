@@ -1,29 +1,34 @@
 public class Operations {
 
     public static void main(String[] args){
-        Size size = new Size(6, 6);
-        Room room = new Room(size);
 
-        Location position = new Location(3, 5);
-        Direction direction = Direction.NORTH;
-        VaccumCleaner cleaner = new VaccumCleaner(position, direction, room);
+
+        Location position = new Location(2, 5);
+        Direction direction = Direction.EAST;
+        VaccumCleaner cleaner = new VaccumCleaner(position, direction);
+
+        Obstacle obstacle = new Obstacle(3,5,3,5);
+
+        Size size = new Size(6, 6);
+        Room room = new Room(size,cleaner);
+
+        room.append(obstacle);
+
+        Space[][] roomSpace = new Space[6][6];
 
         String[] actions = {"M", "L", "M"};
 
         for(int i=0;i<actions.length; i++){
 
-            if(actions[i].equals("L")){
-                cleaner.movement(Instruction.LEFT);
-            } else if(actions[i].equals("R")){
-                cleaner.movement(Instruction.RIGHT);
-            } else {
+            if(Constants.stringInstructionHashMap.containsKey(actions[i])){
+                cleaner.movement(Constants.stringInstructionHashMap.get(actions[i]));
+            } else if(room.isForwardPossible()){
                 cleaner.movement(Instruction.MOVE);
             }
 
         }
 
-        System.out.println("x: "+ cleaner.getLocation().getX() + " y: "+ cleaner.getLocation().getY() + " D: " + cleaner.getDirection());
-
+        System.out.println(cleaner.toString());
         
     }
 

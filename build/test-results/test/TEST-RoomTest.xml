@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RoomTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-22T08:56:41" hostname="somnath-Latitude-5480" time="0.005">
+  <properties/>
+  <testcase name="testIsForwardPossibleAgainstObstacles" classname="RoomTest" time="0.004"/>
+  <testcase name="testIsMovePossible" classname="RoomTest" time="0.0"/>
+  <testcase name="testIsForwardPossibleAgainstObstaclesSizeOne" classname="RoomTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

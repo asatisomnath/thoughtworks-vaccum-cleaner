@@ -18,25 +18,10 @@ public class Location {
 
     public Location forward(Direction direction){
 
-        int xDiff = 0;
-        int yDiff = 0;
+        Forward forward = direction.forward();
 
-        if(Direction.NORTH.equals(direction)){
-            yDiff = 1;
-        } else if(Direction.SOUTH.equals(direction)){
-            yDiff = -1;
-        } else if(Direction.EAST.equals(direction)){
-            xDiff = 1;
-        } else if(Direction.WEST.equals(direction)){
-            xDiff = -1;
-        }
-
-        Location now = new Location(x + xDiff, y + yDiff);
+        Location now = new Location(x + forward.getxDiff(), y + forward.getyDiff());
         return now;
     }
-
-//    public boolean isForwardPossible(Direction direction){
-//
-//    }
 
 }

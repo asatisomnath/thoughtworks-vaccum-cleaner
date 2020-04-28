@@ -2,38 +2,34 @@ public class VaccumCleaner {
 
     private Location location;
     private Direction direction;
-    private Room room;
 
-    public VaccumCleaner(Location location, Direction direction, Room room){
+    public VaccumCleaner(Location location, Direction direction){
         this.location = location;
         this.direction = direction;
-        this.room = room;
     }
 
     public void movement(Instruction instruction){
 
         if(Instruction.MOVE.equals(instruction)){
-            if(isMovePossible()){
-                location = location.forward(direction);
-            }
+            location = location.forward(direction);
         } else {
                 direction = direction.turn(instruction);
         }
     }
 
-    public boolean isMovePossible() {
 
-        if(direction.getDirection().equals("W") && location.getX()==0){
-            return false;
-        } else if(direction.getDirection().equals("E") && location.getX()== room.getSize().getWidth()-1){
-            return false;
-        } else if(direction.getDirection().equals("S") && location.getY()==0){
-            return false;
-        } else if(direction.getDirection().equals("N") && location.getY()== room.getSize().getHeight()-1){
-            return false;
-        } else {
-            return true;
-        }
+    public String toString(){
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("x: ");
+        sb.append(location.getX());
+        sb.append(" y: ");
+        sb.append(location.getY());
+        sb.append(" D: ");
+        sb.append(direction);
+
+        return sb.toString();
     }
 
     public Direction getDirection(){
